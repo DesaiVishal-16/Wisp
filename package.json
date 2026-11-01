@@ -1,0 +1,26 @@
+{
+  "name": "wisp-terminal",
+  "version": "0.1.0",
+  "description": "A local ghostly voice for your terminal commands",
+  "type": "module",
+  "bin": {
+    "wisp": "./dist/src/cli.js"
+  },
+  "files": [
+    "dist/src"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node scripts/set-bin-mode.mjs",
+    "test": "npm run build && node --test dist/tests/cli.test.js",
+    "prepack": "npm run build"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^3.3.2",
+    "typescript": "^5.9.0"
+  }
+}
