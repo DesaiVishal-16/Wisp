@@ -2,7 +2,6 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 
 import { askGhost, SYSTEM_PROMPT } from "../src/cli.js";
-import 'dotenv/config';
 
 test("sends command text to the configured Ollama model", async () => {
   let receivedUrl = "";
